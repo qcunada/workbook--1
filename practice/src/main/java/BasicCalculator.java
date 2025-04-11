@@ -12,6 +12,17 @@ public class BasicCalculator {
         scanner.nextLine();
         System.out.println(num1 * num2);
 
+        scanner.nextLine();
+
+        // asks operation
+        System.out.println("Do you want to add, subtract, multiply or divide?");
+        String operation = scanner.nextLine();
+        System.out.println("You've chosen " + operation);
+
+        // multiply
+        double result = num1 * num2;
+        System.out.println("Result: " + result);
+
 
 
 
