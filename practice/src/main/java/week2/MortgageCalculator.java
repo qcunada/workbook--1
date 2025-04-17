@@ -16,7 +16,7 @@ public class MortgageCalculator {
         System.out.println("Enter loan term in years: ");
         int years = scanner.nextInt();
 
-        // how much interest is applied to your loan each month
+        // monthly rate
         double monthlyRate = (annualRate / 100) / 12;
 
         // Total number of monthly payments

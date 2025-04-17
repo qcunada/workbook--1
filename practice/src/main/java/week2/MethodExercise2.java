@@ -10,8 +10,7 @@ public class MethodExercise2 {
         System.out.println(titledName);
 
      // 2.
-
-      int doubledXP = doubleXP(300);
+        int doubledXP = doubleXP(300);
         System.out.println( "your current xp is now doubled with "+ doubledXP);
 
       // 3.
@@ -99,6 +98,7 @@ public class MethodExercise2 {
             return "Peasant";
         }
     }
+
 
 
 
