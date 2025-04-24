@@ -1,0 +1,11 @@
+ ID#: 1 Product: Candy - Price: $1.95
+ ID#: 2 Product: Juice - Price: $7.95
+ ID#: 3 Product: Chicken - Price: $10.5
+ ID#: 4 Product: Banana - Price: $1.95
+ ID#: 5 Product: Soap - Price: $4.95
+ ID#: 7 Product: apple - Price: $2.66
+ ID#: 1 Product: Candy - Price: $1.95
+ ID#: 2 Product: Juice - Price: $7.95
+ ID#: 3 Product: Chicken - Price: $10.5
+ ID#: 4 Product: Banana - Price: $1.95
+ ID#: 5 Product: Soap - Price: $4.95

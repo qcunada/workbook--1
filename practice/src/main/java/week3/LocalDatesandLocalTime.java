@@ -3,6 +3,7 @@ package week3;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class LocalDatesandLocalTime {
     public static void main(String[] args) {
@@ -64,7 +65,22 @@ public class LocalDatesandLocalTime {
         LocalDateTime ltd12 = LocalDateTime.now().plusDays(1);
         System.out.println(ltd12);
 
-        
+        //13. Parse a date from a string (yyyy-MM-dd)
+        String dateString = "2025-04-23";
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate date13 = LocalDate.parse(dateString,dtf);
+
+        System.out.println("Parsed date: " + date13);
+
+        //14. Parse a time from a string (HH:mm)
+        String timeString = "12:30";
+
+        DateTimeFormatter dtf14 = DateTimeFormatter.ofPattern("HH:mm");
+        LocalTime time14 = LocalTime.parse(timeString,dtf14);
+
+        System.out.println("Parsed time: " + time14);
+
 
     }
 }

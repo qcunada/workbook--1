@@ -1,38 +1,17 @@
 package week3.oop1;
 
 public class Book {
-    private String name;
-    private String color;
-    private int pages;
+    public String title;
+    public String author;
 
-    public String getName() {
-        return name;
-    }
+    public Book(String title, String author){
+        this.title = title;
+        this.author = author;
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
 
     }
 
-    public int getPages() {
-        return pages;
-    }
-
-    public void setPages(int pages) {
-        if (pages > 0) {
-            this.pages = pages;
-        } else {
-            System.out.println("book must at least have 1 page.");
-        }
-    }
 
 }
 
