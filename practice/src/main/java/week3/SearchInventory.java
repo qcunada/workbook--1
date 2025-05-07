@@ -73,7 +73,7 @@ public class SearchInventory {
             System.out.println("New product saved.");
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            
+
 
 
         }
