@@ -52,6 +52,13 @@ public class Room {
     }
     public void checkIn(){
         setDirty(true);
-
+        setOccupied(true);
+    }
+    public void checkOut(){
+        setOccupied(false);
+        cleanRoom();
+    }
+    public void cleanRoom(){
+        setDirty(false);
     }
 }

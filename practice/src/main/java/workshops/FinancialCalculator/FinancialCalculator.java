@@ -1,4 +1,4 @@
-package workshops;
+package workshops.FinancialCalculator;
 
 import java.util.Scanner;
 
