@@ -32,7 +32,7 @@ public class DealershipFileManager {
                  String model = carInfo[3];
                  String vehicleType = carInfo[4];
                  String color = carInfo[5];
-                 int odometer = Integer.parseInt(carInfo[6]);
+                 double odometer = Double.parseDouble(carInfo[6]);
                  double price = Double.parseDouble(carInfo[7]);
 
                  Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType, color, odometer, price);
@@ -41,7 +41,7 @@ public class DealershipFileManager {
 
             } reader.close();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("oops" + e.getMessage());
         }
             return dealership;
     }

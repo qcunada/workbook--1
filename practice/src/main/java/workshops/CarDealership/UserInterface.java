@@ -30,7 +30,7 @@ public class UserInterface {
         boolean run = true;
         while (run) {
 
-            System.out.println("----DEALERSHIP MAIN MENU-----");
+            System.out.println("\n----DEALERSHIP MAIN MENU-----");
             System.out.println("What do you want to do today?");
             System.out.println(" (1) List all Vehicles");
             System.out.println(" (2) Search Vehicle by price");
@@ -41,6 +41,7 @@ public class UserInterface {
             System.out.println(" (7) Search Vehicle by mileage");
             System.out.println(" (8) Add a Vehicle");
             System.out.println(" (9) Remove a Vehicle");
+            System.out.println(" (10) Sell or Lease");
 
             System.out.println(" (0) Exit");
             System.out.println("Choose an option: ");
