@@ -1,0 +1,35 @@
+-- 1. Get all dealerships
+
+SELECT * FROM dealership.dealerships;
+
+-- 2. Find all vehicles for a specific dealership
+
+SELECT D.`name`, V.make, V.model, V.`year` , D.ID FROM dealership.dealerships as D
+JOIN vehicles as V on D.ID = V.dealershipID
+wHERE `name` = "Metro Wheels";
+
+-- 3.Find a car by VIN
+
+SELECT VIN, Make, Model, `year` FROM dealership.vehicles
+WHERE VIN =  "1HGCM82633B004004";
+
+-- 4.Find the dealership where a certain car is located, by VIN
+
+SELECT D.`name`, V.make, V.model, V.`year` , VIN, address FROM dealership.dealerships as D
+JOIN vehicles as V on D.ID = V.dealershipID
+where VIN = "1HGCM82633B004004";
+
+-- 5. Find all Dealerships that have a certain car type (i.e. Red Ford Mustang)
+
+SELECT D.`name`, V.make, V.model, V.`year` , VIN, address FROM dealership.dealerships as D
+JOIN vehicles as V on D.ID = V.dealershipID
+where `type` = "sedan" ;
+
+-- 6. Get all sales information for a specific dealer for a specific date range
+
+SELECT * FROM dealership.sales_contract as SC
+JOIN vehicles as V on V.VIN = SC.VIN
+JOIN dealerships as D on D.ID = V.dealershipID
+where SC.date_of_sale >= "2024-06-01 00:00:00"
+and SC.date_of_sale <= "2024-06-05 00:00:00"
+and D.`name` ="Auto Galaxy" ;

@@ -1,0 +1,44 @@
+CREATE DATABASE dealership;
+CREATE TABLE dealerships (
+id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+`name` VARCHAR(50),
+address VARCHAR(50),
+phone VARCHAR(12));
+
+CREATE TABLE vehicles (
+dealershipID INT NOT NULL,
+id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+VIN VARCHAR(17) NOT NULL UNIQUE,
+make VARCHAR(20),
+model VARCHAR(20),
+`year` int,
+`type` VARCHAR(30),
+color VARCHAR(30),
+odometer INT,
+price DECIMAL,
+sold BOOLEAN,
+CONSTRAINT `FK_vehiclesDealership`
+FOREIGN KEY (dealershipID)
+REFERENCES `dealerships`(id));
+
+CREATE TABLE inventory (
+inventoryID INT PRIMARY KEY AUTO_INCREMENT,
+dealershipID INT NOT NULL,
+VIN VARCHAR(17) NOT NULL,
+CONSTRAINT `FK_inventoryDealership`
+FOREIGN KEY (dealershipID)
+REFERENCES `dealerships`(id));
+
+CREATE TABLE sales_contract (
+id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+dealership_name VARCHAR(70) NOT NULL,
+customer_name VARCHAR(50),
+date_of_sale DATETIME DEFAULT CURRENT_TIMESTAMP,
+VIN VARCHAR(17) NOT NULL UNIQUE,
+price DECIMAL,
+CONSTRAINT `FK_sales_contractVehicles`
+FOREIGN KEY (VIN)
+REFERENCES `vehicles`(VIN)
+);
+
+
