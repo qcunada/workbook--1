@@ -1,0 +1,38 @@
+-- 1. Add a new supplier.
+SELECT * FROM northwind.Suppliers;
+INSERT INTO northwind.suppliers (CompanyName, ContactName, ContactTitle, Address, City,Region, PostalCode, Country, Phone)
+VALUES("Bleach","Quincy Cunada","Manager", "123 main st.", "San Francisco", "CA", "94123","USA","415-123-4567");
+
+-- 2. Add a new product provided by that supplier
+SELECT * FROM northwind.Products;
+INSERT INTO northwind.products(ProductName,SupplierID,QuantityPerUnit, UnitPrice,UnitsInStock,UnitsOnOrder)
+VALUES ("Yogurt la","30", "150 g", "5.000", "78", "35");
+
+-- 3. List all products and their suppliers.
+SELECT ProductName, S.SupplierID, CompanyName  FROM northwind.Products as P
+JOIN Suppliers as S ON P.SupplierID = S.SupplierID;
+
+-- 4. Raise the price of your new product by 15%.
+SELECT * FROM northwind.Products;
+UPDATE Products
+SET UnitPrice = UnitPrice * 1.15
+WHERE ProductID = 79;
+
+-- 5. List the products and prices of all products from that supplier.
+SELECT ProductName, S.SupplierID, CompanyName, UnitPrice  FROM northwind.Products as P
+JOIN Suppliers as S ON P.SupplierID = S.SupplierID;
+
+-- 6. Delete the new product.
+DELETE FROM Products
+WHERE ProductID = 79;
+
+-- 7. Delete the new supplier.
+DELETE FROM Suppliers
+WHERE SupplierID = 31;
+
+-- 8. List all products.
+SELECT * FROM northwind.Products;
+
+-- 9. List all suppliers.
+SELECT * FROM northwind.Suppliers;
+

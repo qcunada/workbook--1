@@ -1,4 +1,6 @@
 package week7.Lambdas;
+@FunctionalInterface
+public interface NumericOperator {
 
-public class NumericOperator {
+    int operate(int a, int b);
 }
